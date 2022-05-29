@@ -1,18 +1,3 @@
-# Zero-VIRUS*: Zero-shot VehIcle Route Understanding System for Intelligent Transportation ([CVPR 2020 AI City Challenge Track 1](https://www.aicitychallenge.org/2020-data-and-evaluation/))
-
-Authors: [Lijun Yu](https://me.lj-y.com), Qianyu Feng, Yijun Qian, Wenhe Liu, Alexander G. Hauptmann \
-Email: lijun@lj-y.com
-
-*Written in the era of Coronavirus Disease 2019 (COVID-19), with a sincere hope for a better world.
-
-```bib
-@inproceedings{yu2020zero,
-  title={Zero-VIRUS: Zero-shot VehIcle Route Understanding System for Intelligent Transportation},
-  author={Yu, Lijun and Feng, Qianyu and Qian, Yijun and Liu, Wenhe and Hauptmann, Alexander G.},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
-  year={2020}
-}
-```
 
 ## Setup
 
@@ -20,19 +5,8 @@ Install [miniconda](https://conda.io/en/latest/miniconda.html), then create the 
 
 ```sh
 conda env create -f environment.yml
-conda activate zero_virus
+conda activate ai_city
 ```
-
-Directory structure:
-
-* datasets
-  * Dataset_A (`AIC20_track1_vehicle_counting.zip/Dataset_A`)
-  * Dataset_B (hidden evaluation)
-* experiments
-  * efficiency
-    * aic2020-base.json
-  * `<experiment_name>`
-    * output.txt
 
 ## Evaluate
 
@@ -45,8 +19,6 @@ To get system outputs, run
 
 ```sh
 ./evaluate.sh <experiment_name> <dataset_split>
-# For example
-./evaluate.sh submission Dataset_A
 ```
 
 To get efficiency base score, run
@@ -57,17 +29,21 @@ python utils/efficiency_base.py
 
 ## Performance
 
-On Dataset A with 8 V100 GPUs:
-
-* S1: 0.9328
-  * S1_Effectiveness: 0.9120
-    * mwRMSE: 4.2738
-  * S1_Efficiency: 0.9815
-    * time: 3084.04
-    * baseline: 0.546801
-
 Visualizations available at [Google Drive](https://drive.google.com/drive/folders/1s3TPykPa3JTaPOHUVOQF8S4iUi3SduAN?usp=sharing).
 
-## License
+## Reference
 
-See [LICENSE](LICENSE). Please read before use.
+```bib
+@inproceedings{yu2020zero,
+  title={Zero-VIRUS: Zero-shot VehIcle Route Understanding System for Intelligent Transportation},
+  author={Yu, Lijun and Feng, Qianyu and Qian, Yijun and Liu, Wenhe and Hauptmann, Alexander G.},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},
+  year={2020}
+}
+```
+
+https://github.com/open-mmlab/mmdetection
+
+https://github.com/ZQPei/deep_sort_pytorch
+
+

@@ -1,4 +1,4 @@
-name: zero_virus
+name: ai_city
 channels:
   - pytorch
   - defaults
