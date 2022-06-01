@@ -17,15 +17,7 @@ As the dataset only provided screenshots of the pre-defined routes, we created o
 
 To get system outputs, run
 
-```sh
-./evaluate.sh <experiment_name> <dataset_split>
-```
-
-To get efficiency base score, run
-
-```sh
-python utils/efficiency_base.py
-```
+python run.py **args
 
 ## Performance
 
